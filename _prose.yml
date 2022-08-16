@@ -1,0 +1,4 @@
+prose:
+  rooturl: '/content'
+  siteurl: 'https://docdock.netlify.com/'
+  media: '/static'
