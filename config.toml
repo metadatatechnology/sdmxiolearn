@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://metadatatechnology.github.io/sdmxiolearn/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
