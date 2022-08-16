@@ -1,2 +1,0 @@
-# sdmxiolearn
-learn.sdmx.io
