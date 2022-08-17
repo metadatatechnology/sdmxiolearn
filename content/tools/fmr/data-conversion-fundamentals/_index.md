@@ -9,18 +9,19 @@ level = "module"
 expertise = "Introductory"
 role = "Business User"
 product = "FMR"
+disableLeftChevron = true
 +++
 
-# Getting started with Fusion Metadata Registry - running FMR in Docker
+# SDMX data conversion fundamentals using Fusion Metadata Registry
 
 ## Module introduction
-
+The SDMX standard provides 12 alternative formats for transmitting data including EDI, JSON, CSV and seven different variants of XML. Enevitably it's a common requirement to convert SDMX datasets between these formats. In this module we look at how to use Fusion Metadata Registry for that purpose.
 
 ## Learning objectives
-- Attain a basic understanding of the SDMX data transmission formats including EDI, 2.0, 2.1, 3.0 and Excel
-- Converting datasets to different transmission formats interactively using the FMR web user interfaces
-- The SDMX-ML 2.1 structure specific quick convert function
-- Introduction to the FMR Data Transformation Web Service
+- Attain a basic understanding of the common SDMX data transmission formats including the most-used XML formats, JSON, CSV and EDI, plus Fusion Metadata Registry's own Excel format
+- Converting datasets to different transmission formats interactively using the FMR web user interface
+- How to use the SDMX-ML 2.1 structure specific 'quick convert' function
+- Principles of how to use FMR's data transformation REST API for converting datasets programmatically
 
 
 ## Prerequisites
