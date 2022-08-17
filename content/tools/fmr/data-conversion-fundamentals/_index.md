@@ -6,7 +6,7 @@ summary = "This module introduces the various SDMX transmission formats for exch
 weight = 10
 hidden = false
 level = "module"
-expertise = "Beginner"
+expertise = "Introductory"
 role = "Business User"
 product = "FMR"
 +++
