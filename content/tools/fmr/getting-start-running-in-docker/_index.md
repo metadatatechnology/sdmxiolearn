@@ -2,7 +2,7 @@
 title = "Running FMR in Docker"
 subtitle = "Learn how to run the FMR software in a Docker container"
 description = "Course Introduction"
-summary = "In this module we introduce Fusion Metadata Registry and explain its role as an SDMX structural metadata registry. After a high-level look at the SDMX 3.0 information model an understanding of which is important for FMR users, we'll look briefly of the principle of software 'containerisation' before concluding with practical step-by-step instructions on how to run FMR using Docker Desktop."
+summary = "In this module we introduce a simple and quick way to get started with Fusion Metadata Registry by running the software in a 'Docker container'.<br><br>Fusion Metadata Registry (FMR) is principally a structural metadata registry. We'll explore what that means and how it can be used including a high-level introduction to the SDMX 3.0 information model, an understanding of which is essential to work effectively with FMR.<br>The principles of 'software containerisation' are covered for those new to the subject, and the module concludes with a step-by-step guide on how to deploy FMR on a desktop PC or Mac in practice using the Docker Desktop container environment."
 weight = 10
 hidden = false
 level = "module"
