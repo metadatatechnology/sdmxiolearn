@@ -1,7 +1,7 @@
 +++
 title = "Unit 01 About structural metadata and 'metadata registries'"
 description = ""
-date = "2022-08-10T18:36:24+02:00"
+date = "2022-08-16T18:36:24+02:00"
 tags = ["Docker"]
 weight = 1
 hidden = "true"
