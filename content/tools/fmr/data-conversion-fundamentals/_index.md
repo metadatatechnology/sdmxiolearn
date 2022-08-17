@@ -1,9 +1,9 @@
 +++
-title = "Data conversion fundamentals"
+title = "SIO-2202 Data conversion fundamentals"
 subtitle = "Learn how to convert SDMX data between transmission formats using FMR"
 description = "Course Introduction"
 summary = "This module introduces the various SDMX transmission formats for exchanging statistical data and explores how datasets can be converted from one format to another interactively using FMR's web user interface, and programatically with the REST API."
-weight = 10
+weight = 2
 hidden = false
 level = "module"
 expertise = "Introductory"
