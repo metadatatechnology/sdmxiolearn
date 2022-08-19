@@ -9,17 +9,24 @@ hidden = "true"
 
 
 ## Introduction
-The use of XML for transmission of both structures and data has been a feature of SDMX since version 1.0. 
+XML is the most widely used format for SDMX data transmission because of its early introduction with SDMX 1.0 and the fact that it provides a good balance between usability, human readability and transmission efficiency - particularly if compressed.
 
-In this unit we look at the various types of XML data message available, highlight their key differences, and identify those that offer the most use.
+Since SDMX 1.0, the standard has accumulated seven different variants of the XML data format, more properly known as **SDMX-ML**. However only three are now relevant for practical purposes:
+- SDMX-ML 2.1 Generic data message
+- SDMX-ML 2.1 Structure-specific data message
+- SDMX-ML 3.0 Structure-specific data message
+
+It's these three messages that we'll concentrate on in this unit.
 
 ## SDMX-ML 2.1 Generic data message
 
-The **Generic message's** key characteristic is that its XML schema is fixed. 
+The **Generic message** is characterised by having a fixed XML schema irrespective of the structure of the dataset.
 
-By contrast, the **structure-specific** XML schema is variable and defined the dataset's DSD. While more verbose, the fixed schema can make it easier to create and process Generic messages because the XML structure is always the same.
+By contrast, the **structure-specific** XML schema is variable and defined by the dataset's DSD. While a little more verbose, the fixed schema can make it easier to create and process Generic messages because the XML structure is always the same.
 
+{{% notice note %}}
 The SDMX-ML 2.1 Generic data message aligns with the SDMX 2.1 information model. 
+{{% /notice %}}
 
 Example:\
 The example below is an *excerpt* from a Generic data message.\

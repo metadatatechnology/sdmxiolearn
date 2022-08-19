@@ -15,12 +15,14 @@ disableLeftChevron = true
 # SDMX data conversion fundamentals using Fusion Metadata Registry
 
 ## Module introduction
-The SDMX standard provides 12 alternative formats for transmitting data including EDI, JSON, CSV and seven different variants of XML. Enevitably it's a common requirement to convert SDMX datasets between these formats. In this module we look at how to use Fusion Metadata Registry for that purpose.
+The SDMX standard provides 12 alternative formats for transmitting data including EDI, JSON, CSV and seven different variants of XML. 
+
+In this module we look at precisely what these formats are, which ones are most useful and how to use Fusion Metadata Registry to convert SDMX datasets between them.
 
 ## Learning objectives
-- Attain a basic understanding of the common SDMX data transmission formats including the most-used XML formats, JSON, CSV and EDI, plus Fusion Metadata Registry's own Excel format
-- Converting datasets to different transmission formats interactively using the FMR web user interface
-- How to use the SDMX-ML 2.1 structure specific 'quick convert' function
+- Gain a basic understanding of the common SDMX data transmission formats including the most-used XML formats, JSON, CSV and EDI, plus Fusion Metadata Registry's own Excel format
+- How to convert datasets to different transmission formats interactively using the FMR web user interface
+- The SDMX-ML 2.1 structure specific 'quick convert' function
 - Principles of how to use FMR's data transformation REST API for converting datasets programmatically
 
 
