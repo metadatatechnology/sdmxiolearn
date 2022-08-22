@@ -52,9 +52,9 @@ The exerpt of a single series below shows this in context. The ````0:0:1:0```` i
 ````
 This approach of decoupling the metadata from the data is designed to minimise the size of the message by avoiding duplication.
 
-{{%expand "See the complete message..." %}}
+{{%expand "See the complete message..." "badge" %}}
 
-```` json
+```` text
 {
     "meta": {
         "id": "IREF519002",
@@ -254,6 +254,8 @@ The SDMX-JSON v2 data message was introduced with SDMX 3.0 and follows the same 
 SDMX-JSON can be used for any data transmission use case, but is best suited for web data discovery and retrieval applications because it carries all of the data and metadata needed to build an effective user interface.
 
 The SDMX-JSON message is equivalent to SDMX-ML Generic in that its JSON schema is fixed and not dependent on the datasets' DSDs.
+
+Like SDMX-ML, the 'series keys only' messages carry just the series keys and omit the observation values.
 
 {{% /panel %}}
 

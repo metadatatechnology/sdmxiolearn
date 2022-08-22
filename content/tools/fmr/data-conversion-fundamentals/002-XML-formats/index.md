@@ -35,7 +35,7 @@ The example below is an *excerpt* from a Generic data message.
 
 A Generic ````Dataset```` consists of a sequence of ````Series```` elements.\
 You'll note that a series starts by defining its ````SeriesKey```` which sets the dimension values followed by a sequence of ````obs```` observation elements containing the time period and its associated observation value.
-````xml
+````text
 	<message:DataSet structureRef="WB_GCI_1_0">
 		<generic:Series>
 			<generic:SeriesKey>
@@ -60,7 +60,7 @@ You'll note that a series starts by defining its ````SeriesKey```` which sets th
 
 {{%expand "See the complete message..." "badge" %}}
 
-````xml
+````text
 <message:GenericData xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer" xmlns:generic="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message https://registry.sdmx.org/schemas/v2_1/SDMXMessage.xsd">
 	<message:Header>
 		<message:ID>IREF353870</message:ID>
@@ -181,27 +181,6 @@ You'll note that a series starts by defining its ````SeriesKey```` which sets th
 
 {{% /expand%}}
 
-A Generic message can optionally carry just the series keys ommitting the observation values:
-
-````xml
-	<generic:Series>
-		<generic:SeriesKey>
-			<generic:Value id="REF_AREA" value="GHA"/>
-			<generic:Value id="INDICATOR" value="GCI"/>
-			<generic:Value id="SUB_INDICATOR" value="RANK"/>
-			<generic:Value id="FREQ" value="A"/>
-		</generic:SeriesKey>
-	</generic:Series>
-	<generic:Series>
-		<generic:SeriesKey>
-			<generic:Value id="REF_AREA" value="GHA"/>
-			<generic:Value id="INDICATOR" value="GCI"/>
-			<generic:Value id="SUB_INDICATOR" value="VALUE"/>
-			<generic:Value id="FREQ" value="A"/>
-		</generic:SeriesKey>
-	</generic:Series>
-````
-
 ## SDMX-ML 2.1 Structure-specific data message
 
 Unlike Generic, the **Structure-specific** messages's XML elements and XML attributes are defined by the Data Structure Definitions of the datasets being transmitted. This approach provides two key benefits:
@@ -221,7 +200,7 @@ The *excerpt* from a Structure-specific message below illustrates the principles
 
 The XML attributes of the ````Series```` element are specific to the DSD for this dataset so refer directly to the DSD's Dimensions (REF_AREA, INDICATOR etc) rather than using key-value pairs. Any Series Attributes would also be included as explicit XML attributes of the Series element. Similarly, Observation Attributes would be included as XML attributes of the Obs elements.
 
-````xml
+````text
  		<Series REF_AREA="GHA" INDICATOR="GCI" SUB_INDICATOR="RANK" FREQ="A">
 			<Obs TIME_PERIOD="2008" OBS_VALUE="102"/>
 			<Obs TIME_PERIOD="2009" OBS_VALUE="114"/>
@@ -250,7 +229,7 @@ The XML attributes of the ````Series```` element are specific to the DSD for thi
 
 {{%expand "See the complete message..." "badge" %}}
 
-````xml
+````text
 <message:StructureSpecificData xmlns:ss="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific" xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer" xmlns:ns1="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=WB:GCI(1.0):ObsLevelDim:TIME_PERIOD" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message https://registry.sdmx.org/schemas/v2_1/SDMXMessage.xsd urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=WB:GCI(1.0):ObsLevelDim:TIME_PERIOD https://demo11.metadatatechnology.com/FusionRegistry/ws/public/sdmxapi/rest/schema/dataflow/WB/GCI/1.0?format=sdmx-2.1">
 	<message:Header>
 		<message:ID>IREF378771</message:ID>
@@ -316,7 +295,7 @@ The key differences in the SDMX 3.0 variant are:
 
 The excerpt below from an SDMX 3.0 Structure-specific message illustrates the ````<Comp>```` element which is used to structure complex objects within the message body:
 
-````xml
+````text
 	<message:DataSet xsi:type="ns1:DataSetType" ss:structureRef="ECB_EXR_COMPLEX_ATTRIBUTES_1_0">
 		<Series FREQ="A" CURRENCY="CAD" CURRENCY_DENOM="EUR" EXR_TYPE="SP00" EXR_SUFFIX="A" TIME_FORMAT="P1Y" COLLECTION="A" DECIMALS="4" TITLE_COMPL="ECB reference exchange rate, Canadian dollar/Euro, 2:15 pm (C.E.T.)" UNIT="CAD" UNIT_MULT="0">
 			<Comp id="TITLE" xsi:type="ns1:TITLE_ATTRIBUTE">
@@ -363,6 +342,31 @@ SDMX versions 1.0 and 2.0 specified four additional XML data messages all of whi
 - SDMX-ML 1.0/2.0 Utility (time data) data message - a little used alternative to Generic
 - SDMX-ML 1.0/2.0 Cross-Sectional data message - a message format designed for exchange of cross-sectional data but little used in practice
 
+## XML 'series keys only' data messages
+A data message can optionally carry just the series keys without observation values as illustrated using the Generic message below. 
+
+````text
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value id="REF_AREA" value="GHA"/>
+			<generic:Value id="INDICATOR" value="GCI"/>
+			<generic:Value id="SUB_INDICATOR" value="RANK"/>
+			<generic:Value id="FREQ" value="A"/>
+		</generic:SeriesKey>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value id="REF_AREA" value="GHA"/>
+			<generic:Value id="INDICATOR" value="GCI"/>
+			<generic:Value id="SUB_INDICATOR" value="VALUE"/>
+			<generic:Value id="FREQ" value="A"/>
+		</generic:SeriesKey>
+	</generic:Series>
+````
+
+'Series keys only' messages find application in use cases where knowledge of the data available is required but the precise observations are not, for instance in interactive 'data discovery' software tools for data consumers.
+
+
 ## Tips and points to note
 {{% panel %}}
 The Generic and Structure-specific XML formats are the most useful and those most likely to be encountered in practice.
@@ -378,6 +382,7 @@ Simlarly the SDMX 3.0 Structure-specific data message must be used for transmiss
 - The SDMX 2.1 Generic message is commonly used and benefits from a fixed schema that is often simpler to create and interpret
 - The SDMX 2.1 Structure specific message is similarly in common usage, it's less verbose and allows validation of the dataset by validating the XML message against its DSD-specific XML schema
 - SDMX 3.0 Structure-specific is the only XML data message for SDMX 3.0 use cases - it follows the same principles as the earlier SDMX 2.1 message with additional support for information model features introduced in SDMX 3.0 including multiple measures and multi-value attributes
+- 'Series keys only' data messages carry just the series keys and omit the observation values
 
 ## In the next unit
 In the next unit we'll look at the SDMX-JSON data transmission messages.
