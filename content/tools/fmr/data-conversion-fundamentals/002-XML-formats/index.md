@@ -9,14 +9,16 @@ hidden = "true"
 
 
 ## Introduction
-XML is the most widely used format for SDMX data transmission because of its early introduction with SDMX 1.0 and the fact that it provides a good balance between usability, human readability and transmission efficiency - particularly if compressed.
+The XML data transmission format was introduced with SDMX 1.0 and is known as **SDMX-ML data**.
 
-Since SDMX 1.0, the standard has accumulated seven different variants of the XML data format, more properly known as **SDMX-ML**. However only three are now relevant for practical purposes:
+It provides a good balance between usability, human readability and transmission efficiency - particularly if compressed. These characteristics in addition to its early introduction have made XML the most widely used format.
+
+Since SDMX 1.0, the standard has accumulated seven different variants of the XML data format.\
+In this unit we'll look at the three most relevant:
 - SDMX-ML 2.1 Generic data message
 - SDMX-ML 2.1 Structure-specific data message
 - SDMX-ML 3.0 Structure-specific data message
 
-It's these three messages that we'll concentrate on in this unit.
 
 ## SDMX-ML 2.1 Generic data message
 

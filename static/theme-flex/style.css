@@ -30,7 +30,7 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #2a5bc9;
+  background-color: #325da8;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,7 +129,7 @@ article > aside {
       article > aside .menu .dd-item.active > div {
         background-color: #eee; }
         article > aside .menu .dd-item.active > div * {
-        border-bottom: dotted 2px #2a5bc9; }
+        border-bottom:  solid 2px #22376c; }
       article > aside .menu .dd-item.haschildren > div {
         margin-left: -20px; }
       article > aside .menu .dd-item div {
