@@ -31,8 +31,10 @@ The SDMX-ML 2.1 Generic data message aligns with the SDMX 2.1 information model.
 {{% /notice %}}
 
 Example:\
-The example below is an *excerpt* from a Generic data message.\
-Datasets consist of a sequence of Series elements that start by defining the series key followed by the observations for each time period.
+The example below is an *excerpt* from a Generic data message.
+
+A Generic ````Dataset```` consists of a sequence of ````Series```` elements.\
+You'll note that a series starts by defining its ````SeriesKey```` which sets the dimension values followed by a sequence of ````obs```` observation elements containing the time period and its associated observation value.
 ````xml
 	<message:DataSet structureRef="WB_GCI_1_0">
 		<generic:Series>
@@ -56,8 +58,7 @@ Datasets consist of a sequence of Series elements that start by defining the ser
 			</generic:Obs>
 ````
 
-
-{{%expand "See the complete message..." %}}
+{{%expand "See the complete message..." "badge" %}}
 
 ````xml
 <message:GenericData xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer" xmlns:generic="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message https://registry.sdmx.org/schemas/v2_1/SDMXMessage.xsd">
@@ -247,7 +248,7 @@ The XML attributes of the ````Series```` element are specific to the DSD for thi
 		</Series>
 ````
 
-{{%expand "See the complete message..." %}}
+{{%expand "See the complete message..." "badge" %}}
 
 ````xml
 <message:StructureSpecificData xmlns:ss="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific" xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer" xmlns:ns1="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=WB:GCI(1.0):ObsLevelDim:TIME_PERIOD" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message https://registry.sdmx.org/schemas/v2_1/SDMXMessage.xsd urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=WB:GCI(1.0):ObsLevelDim:TIME_PERIOD https://demo11.metadatatechnology.com/FusionRegistry/ws/public/sdmxapi/rest/schema/dataflow/WB/GCI/1.0?format=sdmx-2.1">
