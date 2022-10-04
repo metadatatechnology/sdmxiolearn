@@ -1,10 +1,8 @@
 +++
 title = "Unit 04 SDMX CSV data transmission formats"
 description = "Unit 04 SDMX CSV data transmission formats"
-date = "2022-08-21T00:00:00+00:00"
-tags = ["CSV"]
 weight = 4
-hidden = "true"
+hidden = false
 +++
 
 
@@ -27,7 +25,7 @@ A header row defines the meaning of each column.
 
 In the simple case the value of each component is just the **Id**:
 
-```` csv
+```` plaintext
 DATAFLOW,    REF_AREA, INDICATOR, SUB_INDICATOR, FREQ, TIME_PERIOD, OBS_VALUE
 WB:GCI(1.0), GHA,      GCI,       RANK,          A,    2008,        102
 WB:GCI(1.0), GHA,      GCI,       RANK,          A,    2009,        114
@@ -40,7 +38,7 @@ WB:GCI(1.0), GHA,      GCI,       RANK,          A,    2014,        111
 
 Component **Names** (sometimes called Labels) can also be included by encoding each value as ````Id : Name```` as follows:
 
-```` csv
+```` plaintext
 DATAFLOW,                                  REF_AREA:Reference Area, INDICATOR:Indicator,               SUB_INDICATOR:Sub Indicator, FREQ:Frequency, TIME_PERIOD:Time period, OBS_VALUE:Observation
 WB:GCI(1.0): Global Competitiveness Index, GHA: Ghana,              GCI: Global Competitiveness Index, RANK: Rank,                  A: Annual,      2008,                    102
 WB:GCI(1.0): Global Competitiveness Index, GHA: Ghana,              GCI: Global Competitiveness Index, RANK: Rank,                  A: Annual,      2009,                    114
@@ -70,7 +68,7 @@ In addition, the third column now specifies the action type (**ACTION**) bringin
 There can be a mix of action types within a single data message.
 
 The following simple example message has three observations for the dataflow ````ESTAT:CENS_91SMSTA(1.0)```` with an action type of ````I```` indicating that the data is for information purposes only. Note that ````OBS_STATUS```` is an optional observation level attribute.
-```` text
+```` plaintext
 STRUCTURE,STRUCTURE_ID,ACTION,FREQ,MARSTA,AGE,SEX,UNIT,GEO,TIME_PERIOD,OBS_VALUE,TIME_FORMAT,OBS_STATUS
 dataflow,ESTAT:CENS_91SMSTA(1.0),I,A,TOTAL,Y25-29,F,PER,FR,1991,2162398,P1Y,
 dataflow,ESTAT:CENS_91SMSTA(1.0),I,A,TOTAL,Y25-29,M,PER,FR,1991,2147582,P1Y,
@@ -94,4 +92,4 @@ Some implementations support delimiters other than comma, semi-colon (````;````)
 - Replication of component Ids and possibly names (labels) for each observation make CSV inefficient for large datasets
 
 ## In the next unit
-In the next unit we'll look at the legacy GESMES / EDIFACT EDI data message which remains in use
+In the next unit we'll look at how to interactively convert SDMX datasets between the various data transmission formats using the FMR web user interface

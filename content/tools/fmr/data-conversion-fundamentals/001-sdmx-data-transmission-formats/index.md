@@ -2,9 +2,8 @@
 title = "Unit 01 SDMX data transmission formats primer"
 description = "Unit 01 SDMX data transmission formats primer"
 date = "2022-08-17T00:00:00+00:00"
-tags = ["SDMX"]
 weight = 1
-hidden = "true"
+hidden = false
 +++
 
 
@@ -15,7 +14,7 @@ The SDMX standard has 12 different formats for transmitting statistical data:
 
 | Type | Version of the standard | Format | Currency |
 |:---|:----|:----|:---|
-| EDI | SDMX 1.0 | GESMES/TS EDIFACT data message | **current** |
+| EDI | SDMX 1.0 | SDMX-EDI GESMES/TS EDIFACT data message | **current** |
 | XML | SDMX 1.0 / 2.0 | SDMX-ML Generic (time-series) data message | obsolete |
 | XML | SDMX 1.0 / 2.0 | SDMX-ML Compact (time-series) data message | obsolete |
 | XML | SDMX 1.0 / 2.0 | SDMX-ML Utility (time-series) data message | obsolete |
