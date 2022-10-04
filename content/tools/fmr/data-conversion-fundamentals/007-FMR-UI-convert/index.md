@@ -131,7 +131,7 @@ The final dataset can be optionally compressed as a Zip file.
 For some data formats (e.g. SDMX-ML or SDMX-EDI) the header section contains the sender id. This field can be used to set the value the sender id will take.
 
 
-## Tips and points to note
+# Tips and points to note
 {{% panel %}}
 FMR will often allow datasets to be converted and downloaded in the required format despite validation errors being reported. Only critical errors such as structural mismatch between the loaded dataset and the DSD will block conversion.
 
@@ -141,12 +141,12 @@ Loaded datasets are held in temporary storage for up to 15 minutes before being 
 
 {{% /panel %}}
 
-## Recap
+# Recap
 - SDMX datasets can be converted interactively between transmission formats using the Convert Data function that can be found in the web user interfaces menu bar.
 - Datasets can be loaded from file or directly from a URL.
 - FMR automatically validates loaded a loaded dataset against its DSD copy of which must already be present in FMR's structural metadata repository.
 - Loaded datasets can also be optionally validated against a Dataflow or Provision Agreement to check for compliance with any additional Data Constraints.
 - Loaded datasets can be optionally mapped to different DSDs provided the necessary SDMX Structure Maps are in plance, and downloaded in any of the standard SDMX formats
 
-## In the next unit
-In the next unit we'll look briefly at FMR's SDMX-ML 2.1 structure specific ‘quick convert’ function
+# In the next unit
+The next unit looks briefly at FMR's ‘quick convert’ function for converting datasets to SDMX-ML 2.1 Structure Specific

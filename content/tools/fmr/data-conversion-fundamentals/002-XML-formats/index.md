@@ -1,5 +1,5 @@
 +++
-title = "Unit 02 SDMX XML data transmission formats"
+title = "Unit 02 SDMX XML"
 description = "Unit 02 SDMX XML data transmission formats"
 date = "2022-08-17T00:00:00+00:00"
 weight = 2
