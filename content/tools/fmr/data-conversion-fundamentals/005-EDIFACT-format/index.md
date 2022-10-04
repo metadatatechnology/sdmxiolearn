@@ -1,5 +1,5 @@
 +++
-title = "Unit 05 EDI data transmission formats"
+title = "Unit 05 SDMX EDI"
 description = "Unit 05 EDI data transmission formats"
 date = "2022-08-21T00:00:00+00:00"
 weight = 5

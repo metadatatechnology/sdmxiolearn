@@ -1,5 +1,5 @@
 +++
-title = "Unit 04 SDMX CSV data transmission formats"
+title = "Unit 04 SDMX CSV"
 description = "Unit 04 SDMX CSV data transmission formats"
 weight = 4
 hidden = false

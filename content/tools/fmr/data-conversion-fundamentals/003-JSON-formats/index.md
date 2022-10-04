@@ -1,5 +1,5 @@
 +++
-title = "Unit 03 SDMX JSON data transmission formats"
+title = "Unit 03 SDMX JSON"
 description = "Unit 03 SDMX JSON data transmission formats"
 date = "2022-08-17T00:00:00+00:00"
 weight = 3
