@@ -2,9 +2,8 @@
 title = "Unit 03 SDMX JSON data transmission formats"
 description = "Unit 03 SDMX JSON data transmission formats"
 date = "2022-08-17T00:00:00+00:00"
-tags = ["JSON"]
 weight = 3
-hidden = "true"
+hidden = false
 +++
 
 
@@ -19,7 +18,7 @@ The SDMX-JSON v1 data message specification was added to SDMX 2.1 principally to
 SDMX-JSON differs from its XML counterparts in that it transmits both the classification identifiers and their labels. This has the advantage of packaging all the information required to display a dataset in a single message. The XML messages by contrast require applications also have access to the dataset's structural metadata in order to decode enumerated values in particular.
 
 The basic structure of a message is as follows:
-```` text
+```` json
 {
     "meta" : { header information },
     "data" : {
@@ -32,7 +31,7 @@ The basic structure of a message is as follows:
 The ````datasets```` element carries an array of one or more datasets with their accompanying series and observation values. However, the metadata in terms of the component Ids, Names, Descriptions, and the observation time period values are under the ````structures```` element and referenced using a zero-based index string of the form ````0:0:1:0````.
 
 The exerpt of a single series below shows this in context. The ````0:0:1:0```` indicates there are four dimensions respectively referencing the first, first, second and first codes in their codelists defined in the ````structures```` section.
-````text
+```` json
 "series": {
     "0:0:1:0": {
         "attributes": [],
@@ -54,7 +53,7 @@ This approach of decoupling the metadata from the data is designed to minimise t
 
 {{%expand "See the complete message..." "badge" %}}
 
-```` text
+```` json
 {
     "meta": {
         "id": "IREF519002",

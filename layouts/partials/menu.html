@@ -21,9 +21,9 @@
     <li data-nav-id="{{.Permalink}}" class="dd-item
         {{- if .Params.alwaysopen}} alwaysopen{{end -}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
-        ">
+        " style="padding-top: 10px;">
       <div>
-      <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+      <a href="{{ .RelPermalink}}"><strong>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</strong></a>
         
         {{- if ne $numberOfPages 0 }}
           {{- if .Params.alwaysopen }}
@@ -62,7 +62,7 @@
     </li>
   {{- else}}
     {{- if not .Params.Hidden }}
-      <li data-nav-id="{{.Permalink}}" class="dd-item">
+      <li data-nav-id="{{.Permalink}}" class="dd-item" style="padding-top: 5px;">
         <div>
           <a href="{{ .RelPermalink}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}

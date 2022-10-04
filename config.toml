@@ -4,7 +4,7 @@ languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "sdmx.io e-learning"
 pygmentsCodeFences = true
-pygmentsStyle = "monokailight"
+pygmentsStyle = "xcode"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
@@ -49,4 +49,3 @@ home = [ "HTML", "RSS", "JSON"]
 #identifier = "sdmxio"
 #url = "https://metadatatechnology.github.io/sdmxiopreview"
 #weight = 10
-
